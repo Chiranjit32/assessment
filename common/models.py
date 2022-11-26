@@ -1,5 +1,3 @@
-from django.db import models
-
 # Create your models here.
 
 from django.db import models
@@ -48,6 +46,7 @@ class Users(AbstractBaseUser):
     is_login = models.IntegerField(null=True)
     last_login = models.DateTimeField(null=True)
     is_admin = models.BooleanField(default=False)
+    is_staff = models.BooleanField(default=False)
     deleted = models.IntegerField(default=False)
     created = models.DateTimeField(default=now)
     modified = models.DateTimeField(default=now)
